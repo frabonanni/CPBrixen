@@ -15,7 +15,7 @@ import json, requests
 #add your own APIkey
 APIkey = '6e1007dd818bd4d4dbd95b99a1ff01c7'
 #location = st.text_input('Which city temperature?','London')
-temperature = st.radio("Select one of the cities",('London', 'Paris', 'Amsterdam'), help= 'click one of the three options')
+location = st.radio("Select one of these cities",('London', 'Paris', 'Amsterdam'), help= 'click one of the three options')
 
 #check API documentation to see what structure of URL is needed to access the data
 #http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
