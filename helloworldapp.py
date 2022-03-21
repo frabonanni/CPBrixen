@@ -14,7 +14,7 @@ import json, requests
 
 #add your own APIkey
 APIkey = '6e1007dd818bd4d4dbd95b99a1ff01c7'
-location = st.text_input('London')
+location = st.text_input('Which city temperature?','London')
 
 
 #check API documentation to see what structure of URL is needed to access the data
