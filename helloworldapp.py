@@ -13,7 +13,7 @@ import json, requests
 
 # add your own APIkey
 APIkey = '6e1007dd818bd4d4dbd95b99a1ff01c7'
-location = 'london'
+location = input('gimme a city name: ')
 
 # check API documentation to see what structure of URL is needed to access the data
 # http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
