@@ -38,6 +38,6 @@ weatherData = json.loads(response.text)
 
 st.text(str(weatherData['main']['temp_max']))
 temp = str(weatherData['main']['temp_max'])
-st.metric(label= 'temperature', value = temp, 'C°')
+st.metric(label= 'temperature(°C)', value = temp)
 # more???????????    
      
