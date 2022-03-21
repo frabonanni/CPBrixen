@@ -19,7 +19,7 @@ location = st.radio("Select one of these cities",('London', 'Paris', 'Amsterdam'
 
 #check API documentation to see what structure of URL is needed to access the data
 #http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey
+url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
 #print(url)
 
 
@@ -36,6 +36,7 @@ weatherData = json.loads(response.text)
 #from pprint import pprint 
 #pprint(weatherData)  
 
-st.text(str(weatherData['main']['temp_max'])) 
+st.text(str(weatherData['main']['temp_max']))
+st.metric(label= 'temperature', 'C°')
 # more???????????    
      
