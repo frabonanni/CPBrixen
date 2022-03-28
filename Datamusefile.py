@@ -2,7 +2,7 @@
 import json,requests
 from pprint import pprint
 
-keyword=st.text_input('plz give me a keyword')
+keyword= st.text_input('plz give me a keyword')
 option = st.selectbox('Do you prefer synonyms or antonyms of the word you chose?',('synonym', 'antonym'))
 st.write('You selected:', option)
 
