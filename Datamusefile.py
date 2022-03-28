@@ -34,4 +34,4 @@ dataFromDatamuse = json.loads(response.text)
 #Uncomment to see a better readable version:
 #pprint(dataFromDatamuse) #dont forget to import the correct pprint library to make this work
 
-st.text("dataFromDatamuse[0:4]")
+st.write("dataFromDatamuse[0:4]")
