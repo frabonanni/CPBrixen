@@ -33,5 +33,5 @@ dataFromDatamuse = json.loads(response.text)
 #print(dataFromDatamuse) 
 #Uncomment to see a better readable version:
 #pprint(dataFromDatamuse) #dont forget to import the correct pprint library to make this work
-
-st.write("dataFromDatamuse[0:4]")
+for el in dataFromDatamuse:
+    st.write(el["word"])
