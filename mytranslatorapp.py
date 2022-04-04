@@ -1,4 +1,5 @@
 from googletrans import Translator
+import streamlit as st
 translator = Translator()
 
 word = st.text_input('Gimme a word to translate ')
