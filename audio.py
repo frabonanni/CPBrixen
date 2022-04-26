@@ -14,10 +14,10 @@ if new_text != ' ':
 
 
 
-tts1=gTTS(text= ppp, lang= dest_lan)
-tts1.save('file_name.mp3')
-audio_file = open('file_name.mp3', "rb")
-st.audio(data=audio_file, format="audio/mp3", start_time=0)
+    tts1=gTTS(text= ppp, lang= dest_lan)
+    tts1.save('file_name.mp3')
+    audio_file = open('file_name.mp3', "rb")
+    st.audio(data=audio_file, format="audio/mp3", start_time=0)
 
 else:
     pass
