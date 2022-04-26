@@ -4,8 +4,8 @@ from gtts import gTTS
 from googletrans import Translator
 
 
-new_text = st.text_input('ciao')
-dest_lan = st.text_input('it')
+new_text = st.text_input('give me a text:','ciao')
+dest_lan = st.text_input('give me a 2-letter code:', 'it')
 
 if new_text != ' ':
     translator = Translator()
@@ -14,8 +14,8 @@ if new_text != ' ':
 
 
 
-new_name=gTTS(text= ppp, lang= dest_lan)
-new_name.save('file_name.mp3')
+tts1=gTTS(text= ppp, lang= dest_lan)
+tts1.save('file_name.mp3')
 audio_file = open('file_name.mp3', "rb")
 st.audio(data=audio_file, format="audio/mp3", start_time=0)
 
