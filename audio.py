@@ -14,4 +14,4 @@ file_name = st.input('give me a name with .mp3: ')
 new_name=gTTS(text= ppp, lang= dest_lan)
 new_name.save(file_name)
 
-st.audio(ipd.Audio(file_name))
+st.audio(file_name)
