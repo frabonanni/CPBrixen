@@ -1,6 +1,6 @@
 import streamlit as st
 from gtts import gTTS
-import IPython.display as ipd
+
 from googletrans import Translator
 
 new_text = st.input('give me a text: ')
