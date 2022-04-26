@@ -17,7 +17,7 @@ else:
 
 
 new_name=gTTS(text= ppp, lang= dest_lan)
-new_name.save('file_name.mp3)
+new_name.save('file_name.mp3')
 audio_file = open('file_name.mp3', "rb")
 st.audio(data=audio_file, format="audio/mp3", start_time=0)
 
