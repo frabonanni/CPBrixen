@@ -18,7 +18,8 @@ if new_text != ' ':
     audio_file = open('file_name.mp3', "rb")
     st.audio(data=audio_file, format="audio/mp3", start_time=0)
 
-    st.download_button(label= "download the audio file", data= audio_file, file_name="new_text_audio", mime="audio/mp3") 
+    st.download_button(label= "download the audio file", data= audio_file, file_name="new_text_audio", mime="audio/mp3")
+    st.file_uploader(label= "upload the audio file", type=None, accept_multiple_files=False)
 else:
     pass
 
