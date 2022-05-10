@@ -4,7 +4,7 @@ import speech_recognition as sr
 r = sr.Recognizer()
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
-  with sr.AudioFile(AUDIO_FILE) as source:
+  with sr.AudioFile(uploaded_file) as source:
       audio = r.record(source)  
   recognised_text= r.recognize_google(audio)
   st.text('the text recognized from the audio seems to be: ')
