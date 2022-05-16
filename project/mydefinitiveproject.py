@@ -28,5 +28,5 @@ def silence_based_conversation(path):
              st.text('the text recognized from the audio seems to be: ')
              st.text( recognised_text)
 audiofile = st.file_uploader("Upload wav file")
-if file is not None:
+if audiofile is not None:
     silence_based_conversation(audiofile)
