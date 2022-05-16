@@ -19,7 +19,7 @@ def silence_based_conversation(path):
         filename = 'chunk'+str(i)+'.wav'
   
         st.write("Processing chunk "+str(i))                  
-        file = filename                      
+                            
         r = sr.Recognizer()
         
         with sr.AudioFile(uploaded_file) as source:
