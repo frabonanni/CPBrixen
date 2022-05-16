@@ -1,7 +1,5 @@
 import streamlit as st
 import speech_recognition as sr
-sudo pip3 install pydub
-sudo pip3 install Speech Recognition
 
 import os
 
