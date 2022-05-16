@@ -6,7 +6,7 @@ import os
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 
-def silence_based_conversation(path = "alice-medium.wav"):
+def silence_based_conversation(path = "1946-LOperazione-Unthinkable-_AperiStoria-4_.wav"):
     song = AudioSegment.from_wav(path)
     fh= open("recognized.txt", "w+")
     # split track where silence is 0.5 seconds 
@@ -28,4 +28,5 @@ def silence_based_conversation(path = "alice-medium.wav"):
                 recognised_text= r.recognize_google(audio)
                 st.text('the text recognized from the audio seems to be: ')
                 st.text( recognised_text)
-
+audiofile = st.uploader(uploaded_file)
+silence_based_conversation(audiofile)
