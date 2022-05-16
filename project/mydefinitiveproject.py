@@ -11,16 +11,7 @@ def silence_based_conversation(path = "alice-medium.wav"):
     fh= open("recognized.txt", "w+")
     # split track where silence is 0.5 seconds 
     # or more and get chunks
-    chunks = split_on_silence(song,
-        # must be silent for at least 0.5 seconds
-        # or 500 ms. adjust this value based on user
-        # requirement. if the speaker stays silent for 
-        # longer, increase this value. else, decrease it.
-        min_silence_len = 500,
-  
-        # consider it silent if quieter than -16 dBFS
-        # adjust this per requirement
-        silence_thresh = -16
+    chunks = split_on_silence(song,silence_thresh = -16)
      i = 0
      for chunk in chunks:
          chunk_silent= AudioSegment.silent(duration = 10)
