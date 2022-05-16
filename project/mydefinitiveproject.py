@@ -28,5 +28,5 @@ def silence_based_conversation(path = "1946-LOperazione-Unthinkable-_AperiStoria
                 recognised_text= r.recognize_google(audio)
                 st.text('the text recognized from the audio seems to be: ')
                 st.text( recognised_text)
-audiofile = st.uploader(uploaded_file)
+audiofile = st.file_uploader(uploaded_file)
 silence_based_conversation(audiofile)
