@@ -22,7 +22,7 @@ def silence_based_conversation(path):
                             
         r = sr.Recognizer()
         
-        with sr.AudioFile(uploaded_file) as source:
+        with sr.AudioFile(filename) as source:
              audio = r.record(source)  
              recognised_text= r.recognize_google(audio)
              st.text('the text recognized from the audio seems to be: ')
