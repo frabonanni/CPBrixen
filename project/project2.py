@@ -21,7 +21,7 @@ def silence_based_conversation(path = "alice-medium.wav"):
         # consider it silent if quieter than -16 dBFS
         # adjust this per requirement
         silence_thresh = -16
-     i = 0
+        i = 0
      for chunk in chunks:
          chunk_silent= AudioSegment.silent(duration = 10)
          audio_chunk.export(("./chunk{0}.wav".format(i), bitrate ='192k', format ="wav")
