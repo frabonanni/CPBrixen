@@ -6,7 +6,7 @@ import os
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 
-def silence_based_conversation(path = "1946-LOperazione-Unthinkable-_AperiStoria-4_.wav"):
+def silence_based_conversation(path):
     song = AudioSegment.from_wav(path)
     fh= open("recognized.txt", "w+")
     # split track where silence is 0.5 seconds 
@@ -21,12 +21,12 @@ def silence_based_conversation(path = "1946-LOperazione-Unthinkable-_AperiStoria
         st.write("Processing chunk "+str(i))                  
         file = filename                      
         r = sr.Recognizer()
-        uploaded_file = st.file_uploader("Choose a file")
-        if uploaded_file is not None:
-           with sr.AudioFile(uploaded_file) as source:
-                audio = r.record(source)  
-                recognised_text= r.recognize_google(audio)
-                st.text('the text recognized from the audio seems to be: ')
-                st.text( recognised_text)
-audiofile = st.file_uploader("Choose a file")
-silence_based_conversation(audiofile)
+        
+        with sr.AudioFile(uploaded_file) as source:
+             audio = r.record(source)  
+             recognised_text= r.recognize_google(audio)
+             st.text('the text recognized from the audio seems to be: ')
+             st.text( recognised_text)
+audiofile = st.file_uploader("Upload wav file")
+if file is not None:
+    silence_based_conversation(audiofile)
