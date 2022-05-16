@@ -25,18 +25,16 @@ def silence_based_conversation(path = "alice-medium.wav"):
      for chunk in chunks:
          chunk_silent= AudioSegment.silent(duration = 10)
          audio_chunk.export(("./chunk{0}.wav".format(i), bitrate ='192k', format ="wav")
-          filename = 'chunk'+str(i)+'.wav'
+         filename = 'chunk'+str(i)+'.wav'
   
         st.write("Processing chunk "+str(i))                  
         file = filename                      
-    
-
-r = sr.Recognizer()
-uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file is not None:
-  with sr.AudioFile(uploaded_file) as source:
-      audio = r.record(source)  
-  recognised_text= r.recognize_google(audio)
-  st.text('the text recognized from the audio seems to be: ')
-  st.text( recognised_text)
+        r = sr.Recognizer()
+        uploaded_file = st.file_uploader("Choose a file")
+        if uploaded_file is not None:
+            with sr.AudioFile(uploaded_file) as source:
+                audio = r.record(source)  
+                recognised_text= r.recognize_google(audio)
+                st.text('the text recognized from the audio seems to be: ')
+                st.text( recognised_text)
 
