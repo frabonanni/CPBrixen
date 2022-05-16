@@ -24,7 +24,7 @@ def silence_based_conversation(path = "alice-medium.wav"):
         i = 0
      for chunk in chunks:
          chunk_silent= AudioSegment.silent(duration = 10)
-         audio_chunk.export(("./chunk{0}.wav".format(i), bitrate ='192k', format ="wav")
+         chunk.export(("./chunk{0}.wav".format(i), bitrate ='192k', format ="wav")
          filename = 'chunk'+str(i)+'.wav'
   
         st.write("Processing chunk "+str(i))                  
