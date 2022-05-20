@@ -13,7 +13,6 @@ def silence_based_conversation(path):
     # or more and get chunks
     chunks = split_on_silence(song,silence_thresh = -16)
     i = 0
-    st.write("hello")
     for chunk in chunks:
         chunk_silent= AudioSegment.silent(duration = 10)
         audio_chunk.export("./chunk{0}.wav".format(i), bitrate ='192k', format ="wav")
