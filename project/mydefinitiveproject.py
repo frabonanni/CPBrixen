@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 import speech_recognition as sr
-!pip install pydub
+pip install pydub
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 AUDIO_FILE = "/content/drive/MyDrive/Speech_Technology/Audios/speaker_female_1.wav"
@@ -10,7 +10,7 @@ r = sr.Recognizer()
 with sr.AudioFile(AUDIO_FILE) as source:
     audio = r.record(source)  # read the entire audio file
     print("Recognized Speech: \n" + r.recognize_google(audio))
-!pip install ibm_watson
+pip install ibm_watson
 from ibm_watson import SpeechToTextV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 apikey='FoQQPWQYE0B-3i38r1IbI_20uzPYHiF8JMHND1DuQ6yG' ## qui ci va il tuo Apikey che crei nel profilo
