@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-!pip install SpeechRecognition
+
 import speech_recognition as sr
 !pip install pydub
 from pydub import AudioSegment
