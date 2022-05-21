@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 import speech_recognition as sr
-pip install pydub
+#pip install pydub
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 AUDIO_FILE = "/content/drive/MyDrive/Speech_Technology/Audios/speaker_female_1.wav"
