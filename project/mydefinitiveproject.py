@@ -27,6 +27,5 @@ res
 for el in res["results"]:
   for l in el["alternatives"]:
     st.write(l["transcript"])
-audio_text= 
-for el["results"] in res['results'][0]['alternatives'][0]['transcript']:
-    st.write(audio_text)
+audio_text= for el["results"] in res['results'][0]['alternatives'][0]['transcript']:
+                st.write(audio_text)
