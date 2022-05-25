@@ -3,6 +3,10 @@ import os
 import speech_recognition as sr
 st.title('Italian Law translator')
 st.markdown('Hello user! This is the Italian Law Translator app. It is very simple to use and it will help you understand some useful Italian words in a particular situation or context. Please listen to the first recording  and then listen to the second audio file.')
+audio_file = open('/content/drive/MyDrive/Rec_project_python', 'rb')
+audio_bytes = audio_file.read()
+st.audio(audio_bytes, format='wav')
+
 #pip install pydub
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
