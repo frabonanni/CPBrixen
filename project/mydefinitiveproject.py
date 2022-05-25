@@ -3,6 +3,7 @@ import os
 import speech_recognition as sr
 st.title('LawWiki translator for foreigners')
 from PIL import Image
+st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 image = Image.open('language-translator-translater.jpg')
 st.image(image, caption='Let me translate for you!')
 
