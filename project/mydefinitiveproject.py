@@ -1,7 +1,8 @@
 import streamlit as st
 import os
 import speech_recognition as sr
-st.header('Do you not know these words? Let me help you understand them')
+st.title('Italian Law translator')
+st.text('Hello user! This is the Italian Law Translator app. It is very simple to use and it will help you understand some useful Italian words, if you come from a far country and you want to live in Italy')
 #pip install pydub
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
