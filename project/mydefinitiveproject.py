@@ -2,11 +2,11 @@ import streamlit as st
 import os
 import speech_recognition as sr
 st.title('Italian Law translator')
-st.markdown('Hello user! This is the Italian Law Translator app. It is very simple to use and it will help you understand some useful Italian words, if you come from a far country and you want to live in Italy')
+st.markdown('Hello user! This is the Italian Law Translator app. It is very simple to use and it will help you understand some useful Italian words in a particular situation or context. Please listen to the first recording  and then listen to the second audio file.')
 #pip install pydub
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
-AUDIO_FILE = "/content/drive/MyDrive/registrazione python 1 (online-audio-converter.com).wav"
+AUDIO_FILE = "/content/drive/MyDrive/Rec_project_python.wav"
 r = sr.Recognizer()
 with sr.AudioFile(AUDIO_FILE) as source:
     audio = r.record(source)  # read the entire audio file
