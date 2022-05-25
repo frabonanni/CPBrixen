@@ -2,11 +2,6 @@ import streamlit as st
 import os
 import speech_recognition as sr
 st.title('LawWiki translator for foreigners')
-from PIL import Image
-st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-image = Image.open('language-translator-translater.jpg')
-st.image(image, caption='Let me translate for you!')
-
 st.markdown('Hello user! This is the Italian Law Translator app. It is very simple to use and it will help you understand some useful Italian words in a particular situation or context. Please listen to the first recording  and then listen to the second audio file.')
 
 #pip install pydub
