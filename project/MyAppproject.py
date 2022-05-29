@@ -25,17 +25,7 @@ from google.colab import drive
 drive.mount('/content/drive')
 with open("/content/drive/MyDrive/Rec_project_python.wav",'rb') as f:  
   res = stt.recognize(audio=f, content_type='audio/wav', model ='es-ES_NarrowbandModel').get_result()
-
 res
-
-for el in res["results"]:
-  for l in el["alternatives"]:
-    st.write(l["transcript"])
-
-new_list = []
-for el in l["transcript"]:
-    new_list.append(l["transcript"])
-    st.write(new_list)
 
 audio_text= res['results'][0]['alternatives'][0]['transcript']
 st.write(audio_text)
