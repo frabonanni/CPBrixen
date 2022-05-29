@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import speech_recognition as sr
 st.title('LawWiki translator for foreigners')
-st.markdown('Hello user! This is the Italian Law Translator app. It is very simple to use and it will help you understand some useful Italian words in a particular situation or context. Please listen to the first recording  and then listen to the second audio file.')
+st.header('Hello user! This is the ILT app. It is very simple to use and it will help you understand some useful words in a particular situation or context. Please listen to the first recording  and then listen to the second audio file.')
 
 #pip install pydub
 from pydub import AudioSegment
