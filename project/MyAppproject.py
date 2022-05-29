@@ -4,7 +4,7 @@ import os
 import speech_recognition as sr
 st.title('The ILT App')
 image1 = Image.open('language-translator-translater.jpg')
-st.image(image1, caption = "Translate words")
+st.image(image1, caption = "User Neil Iris (@neil_ingham) from Unsplash")
 
 st.write(""" -Hello user! This is the ILT app. It is very simple to use and it will help you understand some useful words in a particular situation or context""")
 st.write(""" -Please listen to the first recording, read the text below it and then listen to the second audio file""")
