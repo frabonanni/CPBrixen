@@ -34,6 +34,3 @@ new_list = []
 for el in l["transcript"]:
     new_list.append(l["transcript"])
     st.write(new_list)
-audio_text= 
-for el["results"] in res['results'][0]['alternatives'][0]['transcript']:
-    print(audio_text)
