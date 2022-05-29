@@ -18,7 +18,7 @@ r = sr.Recognizer()
 with sr.AudioFile(AUDIO_FILE) as source:
     audio = r.record(source)  # read the entire audio file
     print("Recognized Speech: \n" + r.recognize_google(audio))
-!pip install ibm_watson
+pip install ibm_watson
 from ibm_watson import SpeechToTextV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
