@@ -18,16 +18,19 @@ r = sr.Recognizer()
 with sr.AudioFile(AUDIO_FILE) as source:
     audio = r.record(source)  # read the entire audio file
     print("Recognized Speech: \n" + r.recognize_google(audio))
+!pip install ibm_watson
+from ibm_watson import SpeechToTextV1
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 apikey='FoQQPWQYE0B-3i38r1IbI_20uzPYHiF8JMHND1DuQ6yG' ## qui ci va il tuo Apikey che crei nel profilo
 url='https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/36876297-be6a-479d-9f8a-f34ef6a63c31' # il tuo url
-
 authenticator = IAMAuthenticator(apikey)
 stt = SpeechToTextV1(authenticator=authenticator)
-
 stt.set_service_url(url)
 stt.set_disable_ssl_verification(True)
-with open("/content/drive/MyDrive/registrazione python 1 (online-audio-converter.com).wav", 'rb') as f:  
+from google.colab import drive
+drive.mount('/content/drive')
+with open("/content/drive/MyDrive/Rec_project_python.wav",'rb') as f:  
   res = stt.recognize(audio=f, content_type='audio/wav', model ='es-ES_NarrowbandModel').get_result()
 
 res
