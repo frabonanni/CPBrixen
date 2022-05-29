@@ -8,7 +8,7 @@ st.write(""" -Hello user! This is the ILT app. It is very simple to use and it w
 st.write(""" -Please listen to the first recording, read the text below it and then listen to the second audio file""")
 
 image1 = Image.open('language-translator-translater.jpg')
-st.image(image1, caption = "User Neil Iris (@neil_ingham) from Unsplash",width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto"))
+st.image(image1, caption = "My translator",width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 #pip install pydub
 from pydub import AudioSegment
