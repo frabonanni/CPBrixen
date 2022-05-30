@@ -12,7 +12,7 @@ st.write(""" -Please listen to the first recording, read the text below it and t
 #pip install pydub
 
 AUDIO_FILE = "https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/Rec_project_python.wav"
-file_contents = requests.get(link)
+file_contents = requests.get(AUDIO_FILE)
 r = sr.Recognizer()
 with sr.AudioFile(file_contents) as source:
     audio = r.record(source)  # read the entire audio file
