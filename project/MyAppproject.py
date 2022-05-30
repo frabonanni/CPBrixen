@@ -24,7 +24,7 @@ stt.set_disable_ssl_verification(True)
 from google.colab import drive
 drive.mount('/content/drive')
 with open("/content/drive/MyDrive/Rec_project_python.wav",'rb') as f:  
-  res = stt.recognize(audio=f, content_type='audio/wav', model ='es-ES_NarrowbandModel').get_result()
+  res = stt.recognize(audio=f, content_type='audio/wav', model ='it-IT_NarrowbandModel').get_result()
 res
 
 audio_text= res['results'][0]['alternatives'][0]['transcript']
