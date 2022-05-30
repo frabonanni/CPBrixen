@@ -9,7 +9,7 @@ st.write(""" -Please listen to the first recording, read the text below it and t
 #pip install pydub
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
-AUDIO_FILE = "/content/drive/MyDrive/Rec_project_python.wav"
+AUDIO_FILE = "Rec_project_python.wav"
 r = sr.Recognizer()
 with sr.AudioFile(AUDIO_FILE) as source:
     audio = r.record(source)  # read the entire audio file
