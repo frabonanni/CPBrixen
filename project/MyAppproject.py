@@ -21,11 +21,4 @@ authenticator = IAMAuthenticator(apikey)
 stt = SpeechToTextV1(authenticator=authenticator)
 stt.set_service_url(url)
 stt.set_disable_ssl_verification(True)
-from google.colab import drive
-drive.mount('/content/drive')
-with open("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/Rec_project_python.wav",'rb') as f:  
-  res = stt.recognize(audio=f, content_type='audio/wav', model ='it-IT_NarrowbandModel').get_result()
-res
 
-audio_text= res['results'][0]['alternatives'][0]['transcript']
-st.write(audio_text)
