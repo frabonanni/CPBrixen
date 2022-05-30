@@ -1,5 +1,5 @@
 import streamlit as st
-st.header ('')
+st.header ('TRanslate Italian words to any language you want')
 option = st.selectbox(
      'Please select one of the words below',
      ('permesso di soggiorno', 'domicilio' 'residenza', 'questura', 'reddito di cittadinanza', 'assessore', 'dirigente scolastico'))
