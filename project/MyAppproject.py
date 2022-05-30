@@ -9,7 +9,7 @@ st.write(""" -Please listen to the first recording, read the text below it and t
 #pip install pydub
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
-AUDIO_FILE = "Rec_project_python.wav"
+AUDIO_FILE = "https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/Rec_project_python.wav"
 r = sr.Recognizer()
 with sr.AudioFile(AUDIO_FILE) as source:
     audio = r.record(source)  # read the entire audio file
@@ -23,7 +23,7 @@ stt.set_service_url(url)
 stt.set_disable_ssl_verification(True)
 from google.colab import drive
 drive.mount('/content/drive')
-with open("/Rec_project_python.wav",'rb') as f:  
+with open("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/Rec_project_python.wav",'rb') as f:  
   res = stt.recognize(audio=f, content_type='audio/wav', model ='it-IT_NarrowbandModel').get_result()
 res
 
