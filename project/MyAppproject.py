@@ -1,17 +1,20 @@
 import streamlit as st
 import os
 import speech_recognition as sr
+from pydub import AudioSegment
+from pydub.silence import split_on_silence
+import requests
 st.title('The ILT App')
 
 st.write(""" -Hello user! This is the ILT app. It is very simple to use and it will help you understand some useful words in a particular situation or context""")
 st.write(""" -Please listen to the first recording, read the text below it and then listen to the second audio file""")
 
 #pip install pydub
-from pydub import AudioSegment
-from pydub.silence import split_on_silence
+
 AUDIO_FILE = "https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/Rec_project_python.wav"
+file_contents = requests.get(link)
 r = sr.Recognizer()
-with sr.AudioFile(AUDIO_FILE) as source:
+with sr.AudioFile(file_contents) as source:
     audio = r.record(source)  # read the entire audio file
     print("Recognized Speech: \n" + r.recognize_google(audio))
 
