@@ -1,5 +1,10 @@
 import streamlit as st
-st.header ('TRanslate Italian words to any language you want')
+import json,requests
+from pprint import pprint
+
+st.header ('Translate Italian words to any language you want')
+
+keyword= st.text_input('plz give me a keyword', 'word')
 option = st.selectbox(
      'Please select one of the words below',
      ('permesso di soggiorno', 'domicilio' 'residenza', 'questura', 'reddito di cittadinanza', 'assessore', 'dirigente scolastico'))
