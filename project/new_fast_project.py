@@ -8,8 +8,8 @@ st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
 
 option = st.selectbox('Please select one of the words below',
-('permesso di soggiorno', 'domicilio' 'residenza', 'questura', 'reddito di cittadinanza', 'assessore', 'dirigente scolastico'))
+('permesso di soggiorno', 'domicilio','residenza', 'questura', 'reddito di cittadinanza', 'assessore', 'dirigente scolastico'))
 st.write('You selected:', option)
 
 word1= gTTS(text='permesso di soggiorno')
-tts1.save('english_word1.mp3')
+tts1.save('english_hello.mp3')
