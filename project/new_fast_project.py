@@ -9,7 +9,7 @@ st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
 
 new_text = st.text_input('give me a text:')
-dest_lan = st.text_input('give me a 2-letter code:', 'it')
+dest_lan = st.text_input('give me a 2-letter code:')
 
 if new_text != ' ':
     translator = Translator()
