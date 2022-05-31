@@ -5,8 +5,8 @@ from pprint import pprint
 st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
 
-option = st.selectbox(
-     'Please select one of the words below',
-     ('permesso di soggiorno', 'domicilio' 'residenza', 'questura', 'reddito di cittadinanza', 'assessore', 'dirigente scolastico'))
+option = st.selectbox
+('Please select one of the words below',
+('permesso di soggiorno', 'domicilio' 'residenza', 'questura', 'reddito di cittadinanza', 'assessore', 'dirigente scolastico'))
 st.write('You selected:', option)
 
