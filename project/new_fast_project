@@ -1,6 +1,7 @@
 import streamlit as st
 import json,requests
 from pprint import pprint
+from gtts import gTTS
 
 st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
