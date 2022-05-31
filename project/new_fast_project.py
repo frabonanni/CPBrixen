@@ -12,4 +12,4 @@ option = st.selectbox('Please select one of the words below',
 st.write('You selected:', option)
 
 word1= gTTS(text='permesso di soggiorno')
-tts1.save('english_residence permit.mp3')
+word1.save('english_residence permit.mp3')
