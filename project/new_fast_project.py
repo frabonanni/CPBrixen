@@ -8,10 +8,22 @@ import IPython.display as ipd
 st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
 
-option = st.selectbox('Please select one of the words below',
-('permesso di soggiorno', 'domicilio','residenza', 'questura', 'reddito di cittadinanza', 'assessore', 'dirigente scolastico'))
-st.write('You selected:', option)
+new_text = st.text_input('give me a text:')
+dest_lan = st.text_input('give me a 2-letter code:', 'it')
+st.file_uploader(label= "upload new_text", type=None, accept_multiple_files=False)
 
-word1= gTTS(text='permesso di soggiorno')
-word1.save('english_residence permit.mp3')
-ipd.display(ipd.Audio('english_residence permit.mp3', autoplay=True))
+if new_text != ' ':
+    translator = Translator()
+    transToLan = translator.translate(new_text, dest= dest_lan)
+    ppp = transToLan.text
+
+
+    tts1=gTTS(text= ppp, lang= dest_lan)
+    tts1.save('file_name.mp3')
+    audio_file = open('file_name.mp3', "rb")
+    st.audio(data=audio_file, format="audio/mp3", start_time=0)
+
+    st.download_button(label= "download the audio file", data= audio_file, file_name="new_text_audio", mime="audio/mp3")
+else:
+    pass
+
