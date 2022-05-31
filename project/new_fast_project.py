@@ -10,7 +10,7 @@ st.header('Translate Italian words to any language you want')
 word = st.text_input('Gimme a word to translate ')
 destlang= st.text_input('Tell me a two letter code for the destination language like es or en: '
 word = translator.translate(word, src = srclang , dest= destlang)
-st.write('the translation is',abc.text)
+st.write('the translation is',word.text)
 st.file_uploader(label= "upload new_text", type=None, accept_multiple_files=False)
 
 
