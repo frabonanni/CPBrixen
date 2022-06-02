@@ -15,7 +15,7 @@ if word != ' ':
    TranstoLan= translator.translate(word, src=srclang, dest= destlang)
    ppp= TranstoLan.text                        
    st.write('the translation is',TranstoLan.text)
-   word1=gTTS(text=ppp, lang =srclang)
+   word1=gTTS(text=ppp, lang =destlang)
    word1.save('file_name.mp3')
    audio_file= open('file_name.mp3', "rb")
    st.audio(data=audio_file, format="audio/mp3", start_time=0)
