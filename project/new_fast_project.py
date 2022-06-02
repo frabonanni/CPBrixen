@@ -8,11 +8,11 @@ import IPython.display as ipd
 st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
 word = st.text_input('Give me a word to translate ')
+srclang= 'it'
 destlang= st.text_input('Tell me a two letter code for the destination language like es or en: ')
-st.file_uploader(label= "upload new_text", type=None, accept_multiple_files=False)
 if word != ' ':
    translator= Translator()
-   TranstoLan= translator.translate(word, dest= destlang)
+   TranstoLan= translator.translate(word, srclang, dest= destlang)
    ppp= TranstoLan.text                        
    st.write('the translation is',TranstoLan.text)
    word1=gTTS(text=ppp, lang =destlang)
