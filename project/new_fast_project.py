@@ -8,7 +8,7 @@ From PIL import Image
 
 st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
-st.image("")
+st.image("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg")
 word = st.text_input('Give me a word to translate ')
 srclang= 'it'
 destlang= st.text_input('Tell me a two letter code for the destination language like es or en: ')
