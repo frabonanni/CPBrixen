@@ -7,12 +7,19 @@ import IPython.display as ipd
 
 st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
-word = st.text_input('Gimme a word to translate ')
+word = st.text_input('Give me a word to translate ')
 destlang= st.text_input('Tell me a two letter code for the destination language like es or en: '
-abcd= translator.translate(word,dest= destlang)
-st.write('the translation is',abcd.text)
-st.file_uploader(label= "upload new_text", type=None, accept_multiple_files=False)
+st.file_uploader(label= "upload new_text", type=None, accept_multiple_files=False)                        
+
+if word != ' ':
+   translator= Translator()
+   TranstoLan= translator.translate(word, dest= destlang)
+   ppp= TranstoLan.text                        
+   st.write('the translation is',TranstoLan.text)
 
 
-word1=gTTS(text='permesso di soggiorno')
-word1.save('italian_permesso_soggiorno')
+
+word1=gTTS(text=ppp, lang =destlang)
+word1.save('file_name.mp3')
+audio_file= open('file_name.mp3', "rb")
+st.audio(data =audio_file,                         
