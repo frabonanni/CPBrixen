@@ -35,4 +35,4 @@ st.write(dataFromWikipedia['query']['search'][0]['snippet'])
 def strip_html(stringwithHTML):
     return str(html.fromstring(stringwithHTML).text_content())
     mydefinion= str(html.fromstring(stringwithHTML).text_content())
-   st.write(strip_html(mydefinition)))
+    st.write(strip_html(mydefinition)))
