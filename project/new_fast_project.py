@@ -5,7 +5,6 @@ from gtts import gTTS
 from googletrans import Translator
 import IPython.display as ipd
 from PIL import Image
-from lxml import html
 
 st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
