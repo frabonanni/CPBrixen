@@ -5,6 +5,7 @@ from gtts import gTTS
 from googletrans import Translator
 import IPython.display as ipd
 from PIL import Image
+from lxml import html
 
 st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
@@ -24,3 +25,15 @@ if myword != ' ':
    st.download_button(label= "download the audio file", data= audio_file, file_name="new_text_audio", mime="audio/mp3")
 else:
    pass                        
+
+bfword= myword
+mykeyword = 'Reddito_di_cittadinanza_(Italia)'
+url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+mykeyword
+response = requests.get(url)
+dataFromWikipedia = json.loads(response.text)
+st.write(dataFromWikipedia['query']['search'][0]['snippet'])
+
+def strip_html(stringwithHTML):
+    return str(html.fromstring(stringwithHTML).text_content())
+RD_text= 'forma condizionata e non individuale <span class="searchmatch">di</span> <span class="searchmatch">reddito</span> minimo garantito; viene chiamato impropriamente <span class="searchmatch">reddito</span> <span class="searchmatch">di</span> <span class="searchmatch">cittadinanza</span> nel DL stesso'
+st.write(strip_html(RD_text))
