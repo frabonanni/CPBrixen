@@ -31,8 +31,3 @@ url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&s
 response = requests.get(url)
 dataFromWikipedia = json.loads(response.text)
 st.write(dataFromWikipedia['query']['search'][0]['snippet'])
-
-def strip_html(stringwithHTML):
-    return str(html.fromstring(stringwithHTML).text_content())
-RD_text= 'forma condizionata e non individuale <span class="searchmatch">di</span> <span class="searchmatch">reddito</span> minimo garantito; viene chiamato impropriamente <span class="searchmatch">reddito</span> <span class="searchmatch">di</span> <span class="searchmatch">cittadinanza</span> nel DL stesso'
-st.write(strip_html(RD_text))
