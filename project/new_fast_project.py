@@ -25,8 +25,8 @@ if myword != ' ':
 else:
    pass                        
 
-bfword= myword
-mykeyword = 'Reddito_di_cittadinanza_(Italia)'
+
+mykeyword = myword
 url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+mykeyword
 response = requests.get(url)
 dataFromWikipedia = json.loads(response.text)
