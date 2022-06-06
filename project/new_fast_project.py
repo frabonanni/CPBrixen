@@ -32,6 +32,7 @@ response = requests.get(url)
 dataFromWikipedia = json.loads(response.text)
 st.write(dataFromWikipedia['query']['search'][0]['snippet'])
 
+BEAUTIFUL SOUP
 def strip_html(stringwithHTML):
     return str(html.fromstring(stringwithHTML).text_content())
     mydefinion= str(html.fromstring(stringwithHTML).text_content())
