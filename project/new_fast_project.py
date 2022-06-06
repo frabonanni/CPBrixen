@@ -5,6 +5,7 @@ from gtts import gTTS
 from googletrans import Translator
 import IPython.display as ipd
 from PIL import Image
+from bs4 import BeautifulSoup
 
 st.title("MyWiki")
 st.header('Translate Italian words to any language you want')
@@ -31,9 +32,6 @@ url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&s
 response = requests.get(url)
 dataFromWikipedia = json.loads(response.text)
 st.write(dataFromWikipedia['query']['search'][0]['snippet'])
-
-BEAUTIFUL SOUP
-def strip_html(stringwithHTML):
-    return str(html.fromstring(stringwithHTML).text_content())
-    mydefinion= str(html.fromstring(stringwithHTML).text_content())
-    st.write(strip_html(mydefinition))
+soup = BeautifulSoup(dataFromWikipedia['query']['search'][0]['snippet'])
+ppdata = soup.get_text()
+st.write(ppdata)
