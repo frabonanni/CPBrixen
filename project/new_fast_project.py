@@ -5,9 +5,8 @@ from gtts import gTTS
 from googletrans import Translator
 import IPython.display as ipd
 from PIL import Image
-from bs4 import BeautifulSoup
 
-st.title("MyWiki")
+st.title("TradFromIT")
 st.header('Translate Italian words to any language you want')
 st.image("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg")
 myword = st.text_input('Give me a word to translate ')
