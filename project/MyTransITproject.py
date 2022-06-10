@@ -50,6 +50,6 @@ if destlang is not None and myword is not '':
    yourtext= gTTS(text= cleanTextfromWikipedia)
    yourtext.save('your_translation.mp3')
    ipd.display(ipd.Audio('your_translation.mp3', autoplay=True))
-    audio_file = open('file_name.mp3', "rb")
-    st.audio(data=audio_file, format="audio/mp3", start_time=0)
+   audio_file = open('file_name.mp3', "rb")
+   st.audio(data=audio_file, format="audio/mp3", start_time=0)
 
