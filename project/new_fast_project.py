@@ -21,7 +21,7 @@ st.image("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/lan
 myword = st.text_input('Give me a word to translate ')
 srclang= 'it'
 destlang= st.text_input('Tell me a two letter code for the destination language like es or en: ')
-if destlang is not None:
+if destlang is not None and myword is not None:
    firstword=gTTS(text=myword, lang =srclang)
    firstword.save('file_name.mp3')
    audio_file= open('file_name.mp3', "rb")
