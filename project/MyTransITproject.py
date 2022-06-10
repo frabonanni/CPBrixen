@@ -54,3 +54,7 @@ if destlang is not None and myword is not '':
    audio_file = open('file_name.mp3', "rb")
    st.audio(data=audio_file, format="audio/mp3", start_time=0)
 
+st.markdown("""---""")
+
+st.write("Credits:")
+
