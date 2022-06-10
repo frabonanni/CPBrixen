@@ -16,9 +16,9 @@ def strip_html(stringwithHTML):
 
 
 st.title("TradFromIT")
-st.header('Translate Italian words to any language you want')
+st.subheader('Translate Italian words to any language you want')
 st.image("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg")
-myword = st.text_input('Give me a word to translate ',value='')
+myword = st.text_input('Give me an Italian word to translate ',value='')
 srclang= 'it'
 destlang= st.text_input('Tell me a two letter code for the destination language like es or en: ', value= 'en')
 if destlang is not None and myword is not '':
