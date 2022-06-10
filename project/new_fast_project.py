@@ -34,8 +34,8 @@ textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
 st.write(textfromWikipedia)
 
 def strip_html(stringwithHTML):
-    return str(html.fromstring(stringwithHTML).text_content())
     mydefinition = str(html.fromstring(stringwithHTML).text_content())
+    return str(html.fromstring(stringwithHTML).text_content())
 
 cleanTextfromWikipedia = strip_html(textfromWikipedia)    
 st.write(cleanTextfromWikipedia)
