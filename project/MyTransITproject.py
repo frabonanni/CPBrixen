@@ -60,6 +60,10 @@ st.markdown("""---""")
 
 st.write("Credits:")
 st.write("""
-- For Translator image:https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg
+- For Translator image: https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg
+""")
+st.write("""- For the Streamlit documentation: https://docs.streamlit.io/library/api-reference/media/st.audio 
+""")
+st.write("""- For the Wikipedia definitions: https://it.wikipedia.org/wiki/Pagina_principale
 """)
 
