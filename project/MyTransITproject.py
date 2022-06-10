@@ -59,4 +59,6 @@ if destlang is not None and myword is not '':
 st.markdown("""---""")
 
 st.write("Credits:")
+st.write("""
+- For Translator image: 
 
