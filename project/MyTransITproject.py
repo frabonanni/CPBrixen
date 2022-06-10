@@ -45,7 +45,7 @@ if destlang is not None and myword is not '':
    st.write(cleanTextfromWikipedia)
    st.markdown("""---""")
    translator= Translator()
-   TranstoLan= translator.translate(cleanTextfromWikipedia, src='en', dest= 'ar')
+   TranstoLan= translator.translate(cleanTextfromWikipedia, src='en', dest= destlang)
    ppp= TranstoLan.text
    st.write('the translation is',TranstoLan.text)
    
