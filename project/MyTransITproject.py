@@ -60,5 +60,6 @@ st.markdown("""---""")
 
 st.write("Credits:")
 st.write("""
-- For Translator image: 
+- For Translator image:https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg
+""")
 
