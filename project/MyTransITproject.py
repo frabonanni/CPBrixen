@@ -18,6 +18,7 @@ def strip_html(stringwithHTML):
 st.title("TradFromIT")
 st.subheader('Translate Italian words to any language you want')
 st.write('Hello! This app translates any Italian word you put into any language. Then it converts the written word into an audio file which you can listen and download. You find an English definition of the word from Wikipedia and this definition is converted into an audio file that you can listen')
+st.markdown("""---""")
 st.image("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg")
 st.markdown("""---""")
 myword = st.text_input('Give me an Italian word to translate ',value='')
@@ -42,7 +43,7 @@ if destlang is not None and myword is not '':
    textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
    cleanTextfromWikipedia = strip_html(textfromWikipedia)    
    st.write(cleanTextfromWikipedia)
-   
+   st.markdown("""---""")
    translator= Translator()
    TranstoLan= translator.translate(cleanTextfromWikipedia, src='en', dest= destlang)
    ppp= TranstoLan.text                        
