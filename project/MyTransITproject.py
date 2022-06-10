@@ -26,6 +26,11 @@ srclang= 'it'
 destlang= st.text_input('Tell me a two letter code for the destination language like fr or de: ', value= 'en')
 if destlang is not None and myword is not '':
    firstword=gTTS(text=myword, lang =srclang)
+   translator= Translator()
+   TranstoLan= translator.translate(myword, src=srclang, dest= destlang)
+   ppp= TranstoLan.text
+   st.write('the translation is',TranstoLan.text)
+   
    firstword.save('file_name.mp3')
    audio_file= open('file_name.mp3', "rb")
    st.audio(data=audio_file, format="audio/mp3", start_time=0)
