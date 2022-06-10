@@ -47,5 +47,7 @@ if destlang is not None and myword is not '':
    ppp= TranstoLan.text                        
    st.write('the translation is',TranstoLan.text)
       
-                          
+   yourtext= gTTS(text= cleanTextfromWikipedia)
+   yourtext.save('your_translation.mp3')
+   ipd.display(ipd.Audio('your_translation.mp3', autoplay=True))
 
