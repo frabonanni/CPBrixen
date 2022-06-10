@@ -30,8 +30,12 @@ mykeyword = myword
 url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+mykeyword
 response = requests.get(url)
 dataFromWikipedia = json.loads(response.text)
-st.write(dataFromWikipedia['query']['search'][0]['snippet'])
+textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
+st.write(textfromWikipedia)
+
 def strip_html(stringwithHTML):
     return str(html.fromstring(stringwithHTML).text_content())
     mydefinition = str(html.fromstring(stringwithHTML).text_content())
-    st.write(strip_html(mydefinition))
+
+cleanTextfromWikipedia = strip_html(textfromWikipedia)    
+st.write(cleanTextfromWikipedia)
