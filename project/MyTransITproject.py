@@ -50,6 +50,7 @@ if destlang is not None and myword is not '':
    ipd.display(ipd.Audio('your_translation.mp3', autoplay=True))
    audio_file = open('file_name.mp3', "rb")
    st.audio(data=audio_file, format="audio/mp3", start_time=0)
+   
    translator= Translator()
    TranstoLan= translator.translate(cleanTextfromWikipedia, src='en', dest= 'ar')
    ppp= TranstoLan.text                        
