@@ -32,7 +32,7 @@ if destlang is not None and myword is not '':
    translator= Translator()
    TranstoLan= translator.translate(myword, src=srclang, dest= destlang)
    ppp= TranstoLan.text
-st.write('Press the play button so that you can hear the word pronounced in Italian')
+   st.write('Press the play button so that you can hear the word pronounced in Italian')
    st.write('the translation is',TranstoLan.text)
    
    mykeyword = myword
