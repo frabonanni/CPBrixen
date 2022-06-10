@@ -15,11 +15,11 @@ def strip_html(stringwithHTML):
 
 col1, col2= st.columns(2)
 with col1:
-st.title("TradFromIT")
-st.subheader('Translate Italian words to any language you want')
+     st.title("TradFromIT")
+     st.subheader('Translate Italian words to any language you want')
 with col2:
-st.write('Hello! This app translates any Italian word you put into any language. Then it converts the written word into an audio file which you can listen and download. You find an English definition of the word from Wikipedia and this definition is converted into an audio file that you can listen')
-st.image("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg")
+     st.write('Hello! This app translates any Italian word you put into any language. Then it converts the written word into an audio file which you can listen and download. You find an English definition of the word from Wikipedia and this definition is converted into an audio file that you can listen')
+     st.image("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg")
 st.markdown("""---""")
 myword = st.text_input('Give me an Italian word to translate ',value='')
 srclang= 'it'
