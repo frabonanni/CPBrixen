@@ -46,7 +46,5 @@ if destlang is not None and myword is not '':
    ppp= TranstoLan.text                        
    st.write('the translation is',TranstoLan.text)
       
-   
-else:
-   pass                        
+                          
 
