@@ -33,7 +33,7 @@ if destlang is not None and myword is not '':
    TranstoLan= translator.translate(myword, src=srclang, dest= destlang)
    ppp= TranstoLan.text
    st.write('the translation is',TranstoLan.text)
-   t.write('Press the play button so that you can hear the word pronounced in Italian')
+   
    mykeyword = myword
    url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+mykeyword
    response = requests.get(url)
