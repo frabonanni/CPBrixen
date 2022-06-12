@@ -45,7 +45,7 @@ if destlang is not None and myword is not '':
    textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
    cleanTextfromWikipedia = strip_html(textfromWikipedia)
    translator= Translator()
-   TranstoLan= translator.translate(cleanTextfromWikipedia, src='en', dest= destlang)
+   TranstoLan= translator.translate(cleanTextfromWikipedia, src='it', dest= destlang)
    mykeyword = TranstoLan.text
    st.markdown("""---""")
    
