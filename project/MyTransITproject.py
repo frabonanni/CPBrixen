@@ -47,7 +47,7 @@ if destlang is not None and myword is not '':
    st.write(cleanTextfromWikipedia)
    translator= Translator()
    TranstoLan= translator.translate(cleanTextfromWikipedia, src='it', dest= destlang)
-   mykeyword = TranstoLan.text
+   desttranslate = TranstoLan.text
    st.markdown("""---""")
    
    yourtext=gTTS(text= cleanTextfromWikipedia, lang=destlang)
