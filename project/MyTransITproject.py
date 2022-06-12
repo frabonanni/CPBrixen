@@ -15,7 +15,7 @@ def strip_html(stringwithHTML):
 
 col1, col2= st.columns(2)
 with col1:
-     st.title("TradFromIT")
+     st.title("MyTransIT")
      st.image("https://raw.githubusercontent.com/frabonanni/CPBrixen/main/project/language-translator-translater.jpg")
 with col2:
      st.subheader('Translate Italian words to any language you want')
