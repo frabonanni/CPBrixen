@@ -55,7 +55,7 @@ if destlang is not None and myword is not '':
    st.audio(data=audio_file1, format="audio/mp3", start_time=0)
                       
    translator= Translator()
-   TranstoLan= translator.translate(cleanTextfromWikipedia, src='en', dest= destlang)
+   TranstoLan= translator.translate(cleanTextfromWikipedia, dest= destlang)
    st.write('the translation is',TranstoLan.text)
 
 st.markdown("""---""")
