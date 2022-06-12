@@ -51,7 +51,7 @@ if destlang is not None and myword is not '':
    
    yourtext=gTTS(text= desttranslate, lang=destlang)
    yourtext.save('your_translation.mp3')
-   audiofile1= open('your_translation.mp3', "rb")
+   audio_file1= open('your_translation.mp3', "rb")
    st.audio(data=audio_file1, format="audio/mp3", start_time=0)
                       
    st.write('the translation is',TranstoLan.text)
