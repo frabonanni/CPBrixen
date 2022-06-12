@@ -44,6 +44,7 @@ if destlang is not None and myword is not '':
    dataFromWikipedia = json.loads(response.text)
    textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
    cleanTextfromWikipedia = strip_html(textfromWikipedia)
+st.write(cleanTextfromWikipedia)
    translator= Translator()
    TranstoLan= translator.translate(cleanTextfromWikipedia, src='it', dest= destlang)
    mykeyword = TranstoLan.text
