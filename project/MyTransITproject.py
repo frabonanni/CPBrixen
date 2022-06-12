@@ -37,7 +37,7 @@ if destlang is not None and myword is not '':
    st.write('the translation is',TranstoLan.text)
    
    translator= Translator()
-   TranstoLan= translator.translate(myword, src='it', dest= 'en')
+   TranstoLan= translator.translate(myword, src='it', dest= destlang)
    mykeyword = TranstoLan.text
    url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+mykeyword
    response = requests.get(url)
