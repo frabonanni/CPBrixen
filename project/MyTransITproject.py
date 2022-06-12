@@ -34,15 +34,19 @@ if destlang is not None and myword is not '':
    st.markdown("""---""")
    translator= Translator()
    TranstoLan= translator.translate(myword, src=srclang, dest= destlang)
-   ppp= TranstoLan.text
    st.write('the translation is',TranstoLan.text)
    
-   mykeyword = myword
+   translator= Translator()
+   TranstoLan= translator.translate(myword, src='it', dest= 'en')
+   mykeyword = TranstoLan.text
    url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+mykeyword
    response = requests.get(url)
    dataFromWikipedia = json.loads(response.text)
    textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
    cleanTextfromWikipedia = strip_html(textfromWikipedia)
+   translator= Translator()
+   TranstoLan= translator.translate(cleanTextfromWikipedia, src='en', dest= destlang)
+   mykeyword = TranstoLan.text
    st.markdown("""---""")
    
    yourtext=gTTS(text= cleanTextfromWikipedia, lang=destlang)
@@ -52,7 +56,6 @@ if destlang is not None and myword is not '':
                       
    translator= Translator()
    TranstoLan= translator.translate(cleanTextfromWikipedia, src='en', dest= destlang)
-   ppp= TranstoLan.text
    st.write('the translation is',TranstoLan.text)
 
 st.markdown("""---""")
