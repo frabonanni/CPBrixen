@@ -47,7 +47,7 @@ if destlang is not None and myword is not '':
    
    yourtext=gTTS(text= cleanTextfromWikipedia)
    yourtext.save('your_translation.mp3')
-   audio_file1= open('file_name.mp3', "rb")
+   audio_file1= open('your_translation.mp3', "rb")
    st.audio(data=audio_file1, format="audio/mp3", start_time=0)
                       
    translator= Translator()
