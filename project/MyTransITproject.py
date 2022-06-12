@@ -46,6 +46,7 @@ if destlang is not None and myword is not '':
    translator= Translator()
    TranstoLan= translator.translate(cleanTextfromWikipedia, src='it', dest= destlang)
    desttranslate = TranstoLan.text
+   st.write('the translation is',desttranslate)
    st.markdown("""---""")
    
    yourtext=gTTS(text= desttranslate, lang=destlang)
@@ -53,8 +54,6 @@ if destlang is not None and myword is not '':
    audiofile1= open('your_translation.mp3', "rb")
    st.audio(data=audio_file1, format="audio/mp3", start_time=0)
                       
-   translator= Translator()
-   TranstoLan= translator.translate(cleanTextfromWikipedia, dest= destlang)
    st.write('the translation is',TranstoLan.text)
 
 st.markdown("""---""")
