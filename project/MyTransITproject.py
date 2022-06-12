@@ -36,9 +36,7 @@ if destlang is not None and myword is not '':
    TranstoLan= translator.translate(myword, src=srclang, dest= destlang)
    st.write('the translation is',TranstoLan.text)
    
-   translator= Translator()
-   TranstoLan= translator.translate(myword, dest= destlang)
-   mykeyword = TranstoLan.text
+   
    url = 'https://it.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+myword
    response = requests.get(url)
    dataFromWikipedia = json.loads(response.text)
@@ -52,7 +50,7 @@ if destlang is not None and myword is not '':
    
    yourtext=gTTS(text= cleanTextfromWikipedia, lang=destlang)
    yourtext.save('your_translation.mp3')
-   audio_file1= open('your_translation.mp3', "rb")
+   desttranslate= open('your_translation.mp3', "rb")
    st.audio(data=audio_file1, format="audio/mp3", start_time=0)
                       
    translator= Translator()
