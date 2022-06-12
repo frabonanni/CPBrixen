@@ -39,7 +39,7 @@ if destlang is not None and myword is not '':
    translator= Translator()
    TranstoLan= translator.translate(myword, src='it', dest= destlang)
    mykeyword = TranstoLan.text
-   url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+mykeyword
+   url = 'https://it.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+myword
    response = requests.get(url)
    dataFromWikipedia = json.loads(response.text)
    textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
