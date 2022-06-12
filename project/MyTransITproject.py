@@ -25,8 +25,8 @@ myword = st.text_input('Give me an Italian word to translate ',value='')
 srclang= 'it'
 destlang= st.text_input('Tell me a two letter code for the destination language like fr or de: ', value= '')
 option = st.selectbox(
-     'Here you can see some language codes to choose',
-     ('fr', 'af', 'es', 'sq', 'ro'))
+     'Here you can see some language codes to choose for your language',
+     ('en','fr','es', 'sq', 'ro', 'af', 'bs', 'mk', 'mt'))
 if destlang is not None and myword is not '':
    firstword=gTTS(text=myword, lang =srclang)
    st.write('Press the play button below and listen to the audio file')
