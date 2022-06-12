@@ -45,7 +45,7 @@ if destlang is not None and myword is not '':
    cleanTextfromWikipedia = strip_html(textfromWikipedia)
    st.markdown("""---""")
    
-   yourtext=gTTS(text= cleanTextfromWikipedia)
+   yourtext=gTTS(text= cleanTextfromWikipedia, lang=destlang)
    yourtext.save('your_translation.mp3')
    audio_file1= open('your_translation.mp3', "rb")
    st.audio(data=audio_file1, format="audio/mp3", start_time=0)
