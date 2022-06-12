@@ -23,7 +23,7 @@ with col2:
 st.markdown("""---""")
 myword = st.text_input('Give me an Italian word to translate ',value='')
 srclang= 'it'
-destlang= st.text_input('Tell me a two letter code for the destination language like fr or de: ', value= 'en')
+destlang= st.text_input('Tell me a two letter code for the destination language like fr or de: ', value= '')
 if destlang is not None and myword is not '':
    firstword=gTTS(text=myword, lang =srclang)
    st.write('Press the play button below and listen to the audio file')
