@@ -25,7 +25,7 @@ option= st.selectbox('How would you like to import the text? Please select eithe
 if option == 'browser':
    imported_file=st.file_uploader("Choose a text file")
    if imported_file is not None:
-       stringio = StringIO(imported_file.getvalue().decode("utf-8"))
+       stringio = io.StringIO(imported_file.getvalue().decode("utf-8"))
        string_data = stringio.read()
        st.write(string_data)
        st.write(stringio)
