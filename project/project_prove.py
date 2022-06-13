@@ -44,7 +44,7 @@ if option == 'browser':
           st.download_button(label= "If you wish download the audio file", data= audio_file, file_name="new_text_audio", mime="audio/mp3")
           st.markdown("""---""")
           translator= Translator()
-          TranstoLan= translator.translate(imported_file, src=srclang, dest= destlang)
+          TranstoLan= translator.translate(string_data, src=srclang, dest= destlang)
           st.write('the translation is',TranstoLan.text)
           url = 'https://it.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+imported_file
           response = requests.get(url)
