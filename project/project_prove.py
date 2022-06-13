@@ -46,7 +46,7 @@ if option == 'browser':
           translator= Translator()
           TranstoLan= translator.translate(string_data, src=srclang, dest= destlang)
           st.write('the translation is',TranstoLan.text)
-          url = 'https://it.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+imported_file
+          url = 'https://it.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+string_data
           response = requests.get(url)
           dataFromWikipedia = json.loads(response.text)
           textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
