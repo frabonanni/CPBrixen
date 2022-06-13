@@ -30,7 +30,7 @@ if option == 'browser':
    option = st.selectbox(
    'Here you can see some language codes to choose for your language',
    ('en','fr','es', 'sq', 'ro', 'af', 'bs', 'mk', 'mt'))
-   if destlang is not None and imported_file is not '':
+   if destlang is not None and imported_file is not None:
       aaa=gTTS(text=imported_file, lang =srclang)
       st.write('Press the play button below and listen to the audio file')
       aaa.save('file_name.mp3')
