@@ -24,7 +24,7 @@ st.markdown("""---""")
 option= st.selectbox('How would you like to import the text? Please select either browser or input', (' ','browser', 'input'))
 if option == 'browser':
    imported_file=st.file_uploader("Choose a text file")
-   stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+   stringio = StringIO(imported_file.getvalue().decode("utf-8"))
    string_data = stringio.read()
    st.write(string_data)
    st.write(stringio)
