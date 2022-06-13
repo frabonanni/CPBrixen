@@ -30,7 +30,7 @@ if option == 'browser':
    'Here you can see some language codes to choose for your language',
    ('en','fr','es', 'sq', 'ro', 'af', 'bs', 'mk', 'mt'))
    if destlang is not None and imported_file is not '':
-      imported_file=gTTS(text=myword, lang =srclang)
+      imported_file=gTTS(text=imported_file, lang =srclang)
       st.write('Press the play button below and listen to the audio file')
       imported_file.save('file_name.mp3')
       audio_file= open('file_name.mp3', "rb")
@@ -40,7 +40,7 @@ if option == 'browser':
       translator= Translator()
       TranstoLan= translator.translate(imported_file, src=srclang, dest= destlang)
       st.write('the translation is',TranstoLan.text)
-      url = 'https://it.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+myword
+      url = 'https://it.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+imported_file
       response = requests.get(url)
       dataFromWikipedia = json.loads(response.text)
       textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
