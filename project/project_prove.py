@@ -21,7 +21,7 @@ with col2:
      st.subheader('Translate Italian words to any language you want')
      st.write('Hello! This app translates any Italian word you put into any language. Then it converts the written word into an audio file which you can listen and download. You can read an Italian definition of the word from Wikipedia and this definition is converted into an audio file that you can listen')
 st.markdown("""---""")
-option= st.selectbox('How would you like to import the text? Please select either browser or input', ('browswer', 'input'))
+option= st.selectbox('How would you like to import the text? Please select either browser or input', ('browser', 'input'))
 if option == 'browser':
    imported_file=st.file_uploader("Choose a text file")
    srclang= 'it'
