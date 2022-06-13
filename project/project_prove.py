@@ -24,6 +24,7 @@ st.markdown("""---""")
 option= st.selectbox('How would you like to import the text? Please select either browser or input', ('browser', 'input'))
 if option == 'browser':
    imported_file=st.file_uploader("Choose a text file")
+   st.write(imported_file)
    srclang= 'it'
    destlang= st.text_input('Tell me a two letter code for the destination language like fr or de: ', value= '')
    option = st.selectbox(
