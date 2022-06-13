@@ -6,6 +6,7 @@ from googletrans import Translator
 import IPython.display as ipd
 from PIL import Image
 from lxml import html
+import io
 
 
 def strip_html(stringwithHTML):
