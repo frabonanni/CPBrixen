@@ -73,27 +73,27 @@ else:
        st.audio(data=audio_file, format="audio/mp3", start_time=0)
        st.download_button(label= "If you wish download the audio file", data= audio_file, file_name="new_text_audio", mime="audio/mp3")
        st.markdown("""---""")
-      translator= Translator()
-      TranstoLan= translator.translate(myword, src=srclang, dest= destlang)
-      st.write('the translation is',TranstoLan.text)
-      url = 'https://it.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+myword
-      response = requests.get(url)
-      dataFromWikipedia = json.loads(response.text)
-      textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
-      cleanTextfromWikipedia = strip_html(textfromWikipedia)
-      st.write(cleanTextfromWikipedia)
-      translator= Translator()
-      TranstoLan= translator.translate(cleanTextfromWikipedia, src='it', dest= destlang)
-      desttranslate = TranstoLan.text
-      st.write('the translation is',desttranslate)
-      st.markdown("""---""")
+       translator= Translator()
+       TranstoLan= translator.translate(myword, src=srclang, dest= destlang)
+       st.write('the translation is',TranstoLan.text)
+       url = 'https://it.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='+myword
+       response = requests.get(url)
+       dataFromWikipedia = json.loads(response.text)
+       textfromWikipedia = dataFromWikipedia['query']['search'][0]['snippet']
+       cleanTextfromWikipedia = strip_html(textfromWikipedia)
+       st.write(cleanTextfromWikipedia)
+       translator= Translator()
+       TranstoLan= translator.translate(cleanTextfromWikipedia, src='it', dest= destlang)
+       desttranslate = TranstoLan.text
+       st.write('the translation is',desttranslate)
+       st.markdown("""---""")
 
-      yourtext=gTTS(text= desttranslate, lang=destlang)
-      yourtext.save('your_translation.mp3')
-      audio_file1= open('your_translation.mp3', "rb")
-      st.audio(data=audio_file1, format="audio/mp3", start_time=0)
+       yourtext=gTTS(text= desttranslate, lang=destlang)
+       yourtext.save('your_translation.mp3')
+       audio_file1= open('your_translation.mp3', "rb")
+       st.audio(data=audio_file1, format="audio/mp3", start_time=0)
 
-      st.write('the translation is',TranstoLan.text)
+       st.write('the translation is',TranstoLan.text)
 
 st.markdown("""---""")
 
